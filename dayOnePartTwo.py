@@ -14,8 +14,8 @@ def makeList():
 	#for i in range(1, 2):
 	#	list1.append([x.strip() for x in content]);
 	#	print list1[0]
-
 # def printArr():
+
 # 	for i in range(1, 100):
 # 		print list1[i]
 
@@ -24,26 +24,19 @@ def calcSum(numlist):
 	#for i in range(len(numlist)):
 	for value in numlist:
 		temp = value
-		temp = divide(temp)
-		temp = roundDown(temp)
-		temp = subTwo(temp)
+		temp = fuelModule(temp)
 		summ = summ + temp
 	print summ
 	return summ
 
-def divide(d):
-	d = d/3
-	return d
-
-def roundDown(r):
-	math.floor(r)
-	return r
-
-def subTwo(s):
-	s = s - 2
-	return s
-
-
+def fuelModule(d):
+	sumVal = 0;
+	while d >= 9:
+		d = d/3
+		math.floor(d)
+		d = d - 2
+		sumVal = sumVal + d
+	return sumVal
 
 def main():
 	numberList = makeList() #probably should pass the filename int that
