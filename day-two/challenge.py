@@ -10,6 +10,7 @@ def make_list():
 		file_content = file_name.readline()
 	num_list = file_content.split(',')
 	num_list = convertStrListToIntList(num_list)
+	print 100*94 + 25
 	return num_list
 
 
