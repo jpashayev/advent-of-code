@@ -1,5 +1,3 @@
-from _ast import Num
-
 def convertStrListToIntList(str_list):
 	num_list = []
 	for val in str_list:
@@ -21,13 +19,8 @@ def one(x, num_list):
 	temp_one = num_list[val_x]
 	temp_two = num_list[val_y]
 	temp_three = temp_one + temp_two
-	print temp_three
 	position = num_list[x+3]
-	print position
 	num_list[position] = temp_three
-	print num_list[position]
-	print 'break'
-# 	x = x + 4
 	return num_list
 
 def two(x, num_list):
@@ -36,18 +29,12 @@ def two(x, num_list):
 	temp_one = num_list[val_x]
 	temp_two = num_list[val_y]
 	temp_three = temp_one * temp_two
-	print temp_three
 	position = num_list[x+3]
-	print position
 	num_list[position] = temp_three
-	print num_list[position]
-	print "break"
-# 	x = x + 4
 	return num_list
 
 def main():
 	num_list = make_list()
-	print num_list
 	booly = True
 	temp = 0
 	while booly:
@@ -58,11 +45,11 @@ def main():
 			num_list = two(temp, num_list)
 			temp = temp + 4
 		elif num_list[temp] == 99:
-			print num_list[temp]
 			booly = False
 		else:
 			pass
-	print num_list
+	print "The answer is: "
+	print	num_list[0]
 
 if __name__ == '__main__':
 	main()
