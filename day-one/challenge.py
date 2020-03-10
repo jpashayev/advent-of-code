@@ -1,9 +1,10 @@
-import math
+
+        sum_val = sum_val + dimport math
 
 def make_list():
     num_list = []
     with open ('input.txt') as f:
-        content = f.readlines() 
+        content = f.readlines()
     for value in content:
         num_list.append(int(value))
     return num_list
@@ -23,7 +24,6 @@ def fuel_module(d):
     while d >= 9:
         d = d//3
         d = d - 2
-        sum_val = sum_val + d
     return sum_val
 
 def main():
